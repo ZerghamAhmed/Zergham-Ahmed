@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+        <input class="form-control-lg" placeholder="Name"><br><br>
+        <select class="form-control-sm" name = "house">
+            <option disabled selected value=""> House </option>
+            <option value="Adams"> Adams </option>
+            <option value="Cabot"> Cabot </option>
+            <option value="Currier"> Currier </option>
+            <option value="Dunster"> Dunster </option>
+            <option value="Eliot"> Eliot </option>
+            <option value="Kirkland"> Kirkland </option>
+            <option value="Leverett"> Leverett </option>
+            <option value="Lowell"> Lowell </option>
+            <option value="Mather"> Mather </option>
+            <option value="Pforzheimer"> Pforzheimer </option>
+            <option value="Quincy"> Quincy </option>
+            <option value="Winthrop"> Winthrop </option>
+        </select><br><br>
+        Favorite Car:<br>
+        <input name = "car" type = "radio" value = "Ferrari"> Ferrari </input><br>
+        <input name = "car" type = "radio" value = "Lamborghini"> Lamborghini </input><br>
+        <input name = "car" type = "radio" value = "Aston Martin"> Aston Martin </input><br>
+        <input name = "car" type = "radio" value = "McLaren"> McLaren </input><br><br>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-dark btn-lg" type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector('input.form-control-lg').value) {
+                alert('You must provide your name!');
+                return false;
+            }
+            else if (!document.querySelector('select').value) {
+                alert('You must proivde your house!');
+                return false;
+            }
+            else if (!document.querySelector('input[name = "car"]:checked')) {
+                alert('You must provide your favorite car!');
+                return false;
+            }
+                return true;
+
+            };
+    </script>
+
+{% endblock %}
