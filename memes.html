@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Memes</title>
+    </head>
+    <body>
+        <h1>Harvard Memes for Elitist 1% Tweens</h1>
+        <form>
+            <input autofocus autocomplete="off" name="comment" placeholder="Comment" type="text" id="username">
+            <input type="submit" value="Post">
+        </form>
+        <ul></ul>
+        <script>
+
+            const FRIENDS = {
+                'Bill Gates': 'BillGates',
+                'Mark Zuckerberg': 'zuck'
+            };
+
+            document.querySelector('form').onsubmit = function(e) {
+                e.preventDefault();
+                let comment = document.querySelector('input[name=comment]');
+                let li = '<li>' + linkify(comment.value) + '</li>';
+                document.querySelector('ul').innerHTML += li;
+                comment.value = '';
+            };
+
+            // accept user input
+            // then use link method to merge a link plus the FRIENDS variable
+            // return the s
+
+            function linkify(s) {
+                let username = document.getElementById("username");
+                var s = username.link("https://www.facebook.com/")
+                return s;
+            }
+
+        </script>
+    </body>
+</html>
