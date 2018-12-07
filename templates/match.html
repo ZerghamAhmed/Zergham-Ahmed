@@ -1,0 +1,159 @@
+            {% extends "nonstyle.html" %}
+            {% block main %}
+                <div id="page-wrapper">
+                  <h1>Enter your courses!</h1>
+                  <form action="/pair" method="post">
+                  <label for="default">Enter your first class</label>
+                  <input type="text" name="course1" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}
+                  </datalist>
+                </div>
+                <div>
+                     <label for="default">Enter your second class</label>
+                  <input type="text" name="course2" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}
+                  </datalist>
+                </div>
+                <div>
+                     <label for="default">Enter your third class</label>
+                  <input type="text" name="course3" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}
+                  </datalist>
+                </div>
+                <div>
+                 <label for="default">Enter your fourth class</label>
+                  <input type="text" name="course4" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}
+                  </datalist>
+                </div>
+                <div>
+                  <label for="default">Enter your fifth class</label>
+                  <input type="text" name="course5" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}
+                  </datalist>
+                </div>
+                <div>
+                  <label for="default">Enter your sixth class</label>
+                  <input type="text" name="course6" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}
+                  </datalist>
+                </div>
+                <div>
+                  <label for="default">Enter your seventh class</label>
+                  <input type="text" name="course7" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}
+                  </datalist>
+                </div>
+                <div>
+                  <label for="default">Enter your eighth class</label>
+                  <input type="text" name="course8" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}
+                  </datalist>
+                </div>
+                <div>
+                  <label for="default">Enter your nine class</label>
+                  <input type="text" name="course9" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}
+                  </datalist>
+                </div>
+                <div>
+                  <label for="default">Enter your tenth class</label>
+                  <input type="text" name="course10" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}
+                  </datalist>
+                </div>
+                <div>
+                  <label for="default">Enter your eleventh class</label>
+                  <input type="text" name="course11" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}
+                  </datalist>
+                </div>
+                <div>
+                  <label for="default">Enter your twelveth class</label>
+                  <input type="text" name="course12" id="default" list="languages" placeholder="e.g. MATH 21a">
+                  <datalist id="languages">
+                    {% for row in options %}
+                    <option value="{{row[0]}}">
+                    {% endfor %}s
+                  </datalist>
+                </div>
+                <p>
+                  <button class="btn btn-outline-primary" id="submit" name="submit" type="submit" value="Match">Match
+                </p>
+                </form>
+                <script>
+
+                // Get the <datalist> and <input> elements.
+                var dataList = document.getElementById('json-datalist');
+                var input = document.getElementById('ajax');
+
+                // Create a new XMLHttpRequest.
+                var request = new XMLHttpRequest();
+
+                // Handle state changes for the request.
+                request.onreadystatechange = function(response) {
+                    if (request.readyState === 4) {
+                        if (request.status === 200) {
+                            // Parse the JSON
+                            var jsonOptions = JSON.parse(request.responseText);
+
+                            // Loop over the JSON array.
+                            jsonOptions.forEach(function(item) {
+                            // Create a new <option> element.
+                            var option = document.createElement('option');
+                            // Set the value using the item in the JSON array.
+                            option.value = item;
+                            // Add the <option> element to the <datalist>.
+                            dataList.appendChild(option);
+                            });
+
+                            // Update the placeholder text.
+                            input.placeholder = "e.g. MATH 21a";
+                            } else {
+                            // An error occured :(
+                            input.placeholder = "Couldn't load datalist options :(";
+                            }
+                        }
+                    };
+
+                    // Update the placeholder text.
+                    input.placeholder = "Loading options...";
+
+                    // Set up and make the request.
+                    request.open('GET', 'csvjson.json', true);
+                    request.send();
+                </script>
+            {% endblock %}

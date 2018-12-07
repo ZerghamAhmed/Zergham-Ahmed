@@ -1,0 +1,430 @@
+          {% extends "nonstyle.html" %}
+            {% block main %}
+            <style>
+              * {
+                  box-sizing: border-box;
+              }
+
+              /* Create two equal columns that floats next to each other */
+              .column {
+                  float: left;
+                  width: 50%;
+                  padding: 10px;
+              }
+
+              /* Clear floats after the columns */
+              .row:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+              }
+              /*.container {*/
+              /*  height:1000px;*/
+              /*}*/
+              /*.container .btn-holder {*/
+              /*  position: absolute;*/
+              /*  bottom: 40px;*/
+              /*  left: 50%;*/
+              /*  margin-left: -104.5px;*/
+              /*}*/
+            </style>
+
+            <h1 style="color:blue; text-align:center;">Enter your blocking group's courses!</h1>
+
+            <div class="row" style="text-align:center;">
+              <div class="column">
+                <p>
+                  <h1>Blockmate 1</h1>
+                  <div id="page-wrapper">
+                    <form action="/blockingresults" method="post">
+
+
+                    <label for="default">Enter your first class</label>
+                    <input type="text" name="course1" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your second class</label>
+                    <input type="text" name="course2" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your third class</label>
+                    <input type="text" name="course3" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your fourth class</label>
+                    <input type="text" name="course4" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+                </p>
+
+                <p><h1>Blockmate 2</h1>
+                  <div>
+                       <label for="default">Enter your first class</label>
+                    <input type="text" name="course5" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your second class</label>
+                    <input type="text" name="course6" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your third class</label>
+                    <input type="text" name="course7" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your fourth class</label>
+                    <input type="text" name="course8" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+                </p>
+
+                <p><h1>Blockmate 3</h1>
+                  <div>
+                       <label for="default">Enter your first class</label>
+                    <input type="text" name="course9" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your second class</label>
+                    <input type="text" name="course10" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your third class</label>
+                    <input type="text" name="course11" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your fourth class</label>
+                    <input type="text" name="course12" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+                </p>
+
+                <p><h1>Blockmate 4</h1>
+                  <div>
+                       <label for="default">Enter your first class</label>
+                    <input type="text" name="course13" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your second class</label>
+                    <input type="text" name="course14" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your third class</label>
+                    <input type="text" name="course15" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your fourth class</label>
+                    <input type="text" name="course16" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+                </p>
+              </div>
+
+              <div class="column" style="text-align:center;">
+                <p><h1>Blockmate 5</h1>
+                  <div>
+                       <label for="default">Enter your first class</label>
+                    <input type="text" name="course17" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your second class</label>
+                    <input type="text" name="course18" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your third class</label>
+                    <input type="text" name="course19" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your fourth class</label>
+                    <input type="text" name="course20" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+                </p>
+
+                <p><h1>Blockmate 6</h1>
+                  <div>
+                       <label for="default">Enter your first class</label>
+                    <input type="text" name="course21" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your second class</label>
+                    <input type="text" name="course22" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your third class</label>
+                    <input type="text" name="course23" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your fourth class</label>
+                    <input type="text" name="course24" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+                </p>
+
+                <p><h1>Blockmate 7</h1>
+                  <div>
+                       <label for="default">Enter your first class</label>
+                    <input type="text" name="course25" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your second class</label>
+                    <input type="text" name="course26" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your third class</label>
+                    <input type="text" name="course27" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your fourth class</label>
+                    <input type="text" name="course28" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+                </p>
+
+                <p><h1>Blockmate 8</h1>
+                  <div>
+                       <label for="default">Enter your first class</label>
+                    <input type="text" name="course29" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your second class</label>
+                    <input type="text" name="course30" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your third class</label>
+                    <input type="text" name="course31" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+                  </div>
+
+                  <div>
+                       <label for="default">Enter your fourth class</label>
+                    <input type="text" name="course32" id="default" list="languages" placeholder="e.g. MATH 21a">
+                    <datalist id="languages">
+                      {% for row in options %}
+                      <option value="{{row[0]}}">
+                      {% endfor %}
+                    </datalist>
+
+                  </div>
+                </p>
+
+              </div>
+
+            </div>
+            <p style="text-align:center;">
+              <button class="btn btn-outline-primary btn-lg" id="submit" name="submit" type="submit" value="Match" style="position:relative; left: 0%; margin-top:0%;padding-left:50%;padding-right:50%;">Match</button>
+            </p>
+            <!--https://www.w3schools.com/css/css_positioning.asp-->
+
+                <script>
+
+                // Get the <datalist> and <input> elements.
+                var dataList = document.getElementById('json-datalist');
+                var input = document.getElementById('ajax');
+
+                // Create a new XMLHttpRequest.
+                var request = new XMLHttpRequest();
+
+                // Handle state changes for the request.
+                request.onreadystatechange = function(response) {
+                    if (request.readyState === 4) {
+                        if (request.status === 200) {
+                            // Parse the JSON
+                            var jsonOptions = JSON.parse(request.responseText);
+
+                            // Loop over the JSON array.
+                            jsonOptions.forEach(function(item) {
+                            // Create a new <option> element.
+                            var option = document.createElement('option');
+                            // Set the value using the item in the JSON array.
+                            option.value = item;
+                            // Add the <option> element to the <datalist>.
+                            dataList.appendChild(option);
+                            });
+
+                            // Update the placeholder text.
+                            input.placeholder = "e.g. MATH 21a";
+                            } else {
+                            // An error occured :(
+                            input.placeholder = "Couldn't load datalist options :(";
+                            }
+                        }
+                    };
+
+                    // Update the placeholder text.
+                    input.placeholder = "Loading options...";
+
+                    // Set up and make the request.
+                    request.open('GET', 'csvjson.json', true);
+                    request.send();
+                </script>
+
+            {% endblock %}

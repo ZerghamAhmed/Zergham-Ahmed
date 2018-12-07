@@ -1,0 +1,20 @@
+{% extends "nonstyle.html" %}
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<center>
+    <h1>Your best match concentration is:</h1>
+    <div class="content-section">
+        <h2 style="color:blue;">
+            {{ match }}
+        </h2>
+    </div>
+    <p>
+        <a href="https://handbook.fas.harvard.edu/book/fields-concentration">Find out more about concentration requirements here!</a>
+    </p>
+    <img src="https://s3.amazonaws.com/thumbnails.thecrimson.com/photos/2017/10/05/195827_1324710.jpg.1500x999_q95_crop-smart_upscale.jpg" alt="Annenberg Dining Hall" width=750 height =400>
+</center>
+
+{% endblock %}

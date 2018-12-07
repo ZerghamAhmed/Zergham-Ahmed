@@ -1,0 +1,20 @@
+{% extends "nonstyle.html" %}
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<center>
+    <h1>Your blocking group's best match concentration is:</h1>
+    <div class="content-section">
+        <h2 style="color:blue;">
+            {{ match }}
+        </h2>
+    </div>
+    <p>
+        <a href="https://handbook.fas.harvard.edu/book/fields-concentration">Find out more about your blocking group's concentration here!</a>
+    </p>
+    <img src="/static/julia.jpeg" alt="Julia's Blocking Group" width=750 height =500>
+</center>
+
+{% endblock %}
